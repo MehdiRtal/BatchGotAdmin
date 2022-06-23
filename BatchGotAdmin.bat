@@ -1,7 +1,5 @@
 @echo off
 
-:: BatchGotAdmin
-:-------------------------------------
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
 
@@ -22,6 +20,3 @@ if '%errorlevel%' NEQ '0' (
     if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
     pushd "%CD%"
     CD /D "%~dp0"
-:--------------------------------------
-
-<YOUR BATCH SCRIPT HERE>
